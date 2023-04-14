@@ -9,7 +9,7 @@
                        <select name="lugar" id="lugar" class="custom-select rounded-0">
                             <option value="">Seleccione</option>
                             @foreach ($lugares as $item)
-                                <option value="{{$item->id}}" {{$item->id==$publicidad->place_id?"selected":""}}>{{$item->nombre}}</option>
+                                <option value="{{$item->id}}" {{$item->id==@$publicidad->place_id?"selected":""}}>{{$item->nombre}}</option>
                             @endforeach
                        </select>
                 </div>
