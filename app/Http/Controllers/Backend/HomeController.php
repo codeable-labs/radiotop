@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Register;
-use App\Model\Contact;
+use App\Models\Contact;
 
 class HomeController extends Controller
 {
