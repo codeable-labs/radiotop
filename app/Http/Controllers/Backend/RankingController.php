@@ -83,7 +83,7 @@ class RankingController extends Controller
         $regiones = Region::orderBy('id','desc')->get();
         $generos = Gender::orderBy('id','desc')->get();
         
-        return view('backend.ranking.edit',['registro'=>$registro,'artistas'=>$artistas,'regiones'=>$regiones,'generos'=>$generos]);
+        return view('backend.ranking.edit',['ranking'=>$registro,'artistas'=>$artistas,'regiones'=>$regiones,'generos'=>$generos]);
     }
 
     /**

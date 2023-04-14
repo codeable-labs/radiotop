@@ -9,7 +9,7 @@
                       <select name="artista" id="artista" class="form-control">
                         <option value="">Seleccione</option>
                         @foreach ($artistas as $row)
-                            <option value="{{$row->id}}">{{$row->nombre}}</option>
+                            <option value="{{$row->id}}" {{$row->id==@$ranking->artist_id?"selected":''}}>{{$row->nombre}}</option>
                         @endforeach
                       </select>
                 </div>
@@ -20,7 +20,7 @@
                         <select name="region" id="region" class="form-control">
                             <option value="">Seleccione</option>
                             @foreach ($regiones as $row)
-                                <option value="{{$row->id}}">{{$row->nombre}}</option>
+                                <option value="{{$row->id}}" {{$row->id==@$ranking->region_id?"selected":''}}>{{$row->nombre}}</option>
                             @endforeach
                         </select>
                 </div>
@@ -30,7 +30,7 @@
                         <select name="genero" id="genero" class="form-control">
                             <option value="">Seleccione</option>
                             @foreach ($generos as $row)
-                                <option value="{{$row->id}}">{{$row->nombre}}</option>
+                                <option value="{{$row->id}}" {{$row->id==@$ranking->gender_id?"selected":''}}>{{$row->nombre}}</option>
                             @endforeach
                         </select>
                 </div>
@@ -54,7 +54,12 @@
                             </div>
 
                             <div class="col-md-12 placeimages">
-
+                                @if(isset($ranking->archivo))
+                
+                                <div class="col-md-12 text-center">
+                                    <iframe class="ranking_resultados__document" src="/storage/{{$ranking->archivo}}" title="Radio TOP TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            @endif
                             </div>
                         </div>
                     </div>
