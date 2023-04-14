@@ -76,7 +76,7 @@
                                                 <td>{{@$reg->gender->nombre}}</td>
                                                 <td>{{$reg->created_at}}</td>
                                                 <td width="7%">
-                                                    <a href="/admin/ranking/{{ @$prod->id }}/edit"
+                                                    <a href="/admin/ranking/{{ @$reg->id }}/edit"
                                                         class="btn-xs btn btn-outline-info "><i class="far fa-edit"></i></a>
                                                     <a href="#" data-id="{{ @$reg->id }}" data-toggle="modal"
                                                         data-target="#delobjeto"

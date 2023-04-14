@@ -38,12 +38,24 @@ Auth::routes();
 
 Route::prefix('admin')->group(function(){
     Route::get('/',[HomeController::class,'index']);
-    Route::resource('artistas',ArtistController::class);
-    Route::resource('regiones',RegionController::class);
-    Route::resource('generos',GenderController::class);
-    Route::resource('publicidad',PublicityController::class);
-    Route::resource('ranking',RankingController::class);
-    Route::resource('notas',PostController::class);
+    Route::resource('artistas',ArtistController::class)->except([
+        'show'
+    ]);
+    Route::resource('regiones',RegionController::class)->except([
+        'show'
+    ]);
+    Route::resource('generos',GenderController::class)->except([
+        'show'
+    ]);
+    Route::resource('publicidad',PublicityController::class)->except([
+        'show'
+    ]);
+    Route::resource('ranking',RankingController::class)->except([
+        'show'
+    ]);
+    Route::resource('notas',PostController::class)->except([
+        'show'
+    ]);
     Route::get('/contactos',[ContactController::class,'index']);
    
 });
