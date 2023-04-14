@@ -33,14 +33,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3>{{$ranking}}</h3>
 
                 <p>Ranking</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/admin/ranking" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -48,14 +48,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53</h3>
+                <h3>{{$contactos}}</h3>
 
-                <p>Publicidad</p>
+                <p>Anunciantes</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="#" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/admin/contactos" class="small-box-footer">Ver <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
