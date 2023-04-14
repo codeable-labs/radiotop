@@ -76,12 +76,13 @@ function obtenerDatos(region,genero,artista){
     .then(response=>{
         if(response!=""){
             $('.fnRankingResults').removeClass('m--empty');
-
+            
             if(response.genero=="empty"){
                 $('.fnRankingGenderImage').attr('src', '/images/urbano.png');
             }else{
                 
-                $('.fnRankingGenderImage').attr('src', '/images/'+response.genero+'.png');
+                let genero = response.genero;
+                $('.fnRankingGenderImage').attr('src', '/images/'+genero.toLowerCase()+'.png');
             }
 
             $('.fnRankingName').html(response.title);
