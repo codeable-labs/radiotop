@@ -11,6 +11,8 @@ use App\Models\Register;
 use App\Models\Publicity;
 use App\Models\Post;
 use App\Models\Contact;
+use App\Models\Banner;
+
 use Illuminate\Support\Collection;
 
 class HomeController extends Controller
@@ -25,7 +27,9 @@ class HomeController extends Controller
         $publicidad1 = Publicity::where('place_id',1)->get();
         $publicidad2 = Publicity::where('place_id',2)->get();
 
-        return view('frontend.index',['artistas'=>$artistas,'generos'=>$generos,'regiones'=>$regiones,'publicidad1'=>$publicidad1,'publicidad2'=>$publicidad2]);
+        $banners = Banner::orderBy('id','asc')->get();
+
+        return view('frontend.index',['banners'=>$banners,'artistas'=>$artistas,'generos'=>$generos,'regiones'=>$regiones,'publicidad1'=>$publicidad1,'publicidad2'=>$publicidad2]);
 
     }
 

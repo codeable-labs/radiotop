@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <div class="brand-link main-sidebar__brand">
-        <img src="/images/logo__claro.png" class="img-fluid claro__logo">
+        <img src="/images/radiotop.svg" class="img-fluid claro__logo">
 
     </div>
 
@@ -48,6 +48,13 @@
             <a href="/admin/generos" class="nav-link {{{ (Request::is('admin/generos*') ? 'active' : '') }}}">
 
               <p>Géneros </p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="/admin/banners" class="nav-link {{{ (Request::is('admin/banners*') ? 'active' : '') }}}">
+
+              <p>Banner </p>
             </a>
           </li>
 

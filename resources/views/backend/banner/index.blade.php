@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Géneros</h1>
+                        <h1>Banners</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
 
-                            <li class="breadcrumb-item active">Géneros</li>
+                            <li class="breadcrumb-item active">Banners</li>
                         </ol>
                     </div>
                 </div>
@@ -40,13 +40,13 @@
 
                         <!-- /.card-header -->
                         <div class="card-body table-responsive">
-                           
                             <div class="row">
                                 <div class="col-md-2">
-                                    <a href="/admin/generos/create"
-                                        class="btn btn-block btn-outline-primary btn-flat  mt-2">Crear género</a>
+                                    <a href="/admin/banners/create"
+                                        class="btn btn-block btn-outline-primary btn-flat  mt-2">Crear banner</a>
                                 </div>
                             </div>
+                           
                            
 
                         <div class="row">
@@ -55,27 +55,36 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>Nombre</th>
-                                        <th>Icono</th>
+                                        <th>Titulo</th>
+                                        <th>Autor</th>
+                                        <th>Canción</th>
+
+                                        <th>Banner</th>
+                                        <th>Ranking</th>
                                         <th>Fecha</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
-                                      @foreach ($generos as $k => $genero)
+                                      @foreach ($banners as $k=> $banner)
                                           
-                                      
+                                     
                                             <tr>
-                                                <th>{{$k+1}}</th>
-                                                <td>{{$genero->nombre}}</td>
-                                                <td><img src="/storage/{{$genero->icono}}" width="50"></td>
-                                                <td>{{$genero->created_at}}</td>
                                                 
+                                                <th>{{$k+1}}</th>
+                                                <td>{{$banner->titulo}}</td>
+                                                <td>{{$banner->autor}}</td>
+                                                <td>{{$banner->cancion}}</td>
+
+                                                <td><img src="/storage/{{$banner->imagen}}" width="50"></td>
+                                                <td>{{@$banner->register->artist->nombre}} - {{@$banner->register->region->nombre}} - {{@$banner->register->gender->nombre}}</td>
+                                               
+                                                <td>{{$banner->created_at}}</td>
                                                 <td width="7%">
-                                                    <a href="/admin/generos/{{ @$genero->id }}/edit"
+                                                    <a href="/admin/notas/{{ @$banner->id }}/edit"
                                                         class="btn-xs btn btn-outline-info "><i class="far fa-edit"></i></a>
-                                                    <a href="#" data-id="{{ @$genero->id }}" data-toggle="modal"
+                                                    <a href="#" data-id="{{ @$banner->id }}" data-toggle="modal"
                                                         data-target="#delobjeto"
                                                         class="btn btn-xs btn-dangers btn-object-delete"><i
                                                             class="far fa-trash-alt"></i></a>
@@ -83,8 +92,8 @@
                                                 </td>
                                             </tr>
                                         
-                                     @endforeach
 
+                                @endforeach
                                           
                                 </tbody>
 
@@ -112,7 +121,7 @@
         <div class="modal-dialog">
             <div class="modal-content bg-danger">
 
-                <form class="delete-objeto" action="/admin/generos/delete" method="POST">
+                <form class="delete-objeto" action="/admin/regiones/delete" method="POST">
                     @csrf
 
                     <div class="modal-header">

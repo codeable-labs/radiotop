@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\RankingController;
 use App\Http\Controllers\Backend\RegionController;
 use App\Http\Controllers\Backend\PostController;
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,9 @@ Route::prefix('admin')->group(function(){
         'show'
     ]);
     Route::resource('notas',PostController::class)->except([
+        'show'
+    ]);
+    Route::resource('banners',BannerController::class)->except([
         'show'
     ]);
     Route::get('/contactos',[ContactController::class,'index']);

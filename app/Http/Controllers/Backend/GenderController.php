@@ -45,7 +45,11 @@ class GenderController extends Controller
         $genero = new Gender();
 
         $genero->nombre = $request->nombre;
-        $genero->icono = $request->icono;
+        
+        if($request->file('icono')){
+            $path = $request->icono->store('icono');
+            $genero->icono  = $path;
+        }
 
         $genero->save();
 
@@ -78,7 +82,11 @@ class GenderController extends Controller
         $genero = Gender::find($id);
 
         $genero->nombre = $request->nombre;
-        $genero->icono = $request->icono;
+        
+        if($request->file('icono')){
+            $path = $request->icono->store('icono');
+            $genero->icono  = $path;
+        }
 
         $genero->save();
 
@@ -91,9 +99,9 @@ class GenderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        Artist::find($request->id)->delete();
-        return redirect()->route('artistas.index')->with('info','Artista eliminado con éxito');
+        Gender::find($request->id)->delete();
+        return redirect()->route('generos.index')->with('info','Artista eliminado con éxito');
     }
 }

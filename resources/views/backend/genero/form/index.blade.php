@@ -3,100 +3,33 @@
 
         <div class="card-body">
             <div class="row">
-
-                <div class="form-group  col-sm-6">
-                    <label for="name" class="control-label">Nombres  </label>
-                        <input type="text"  name="name" class="form-control  @if($errors->first('name')) is-invalid @endif" value="{{ @$user->name}}" id="name" placeholder="Nombres" required>
-                        <span class="error invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('name') }}</strong>
-                        </span>
-                </div>
-
-
-                <div class="form-group @if($errors->first('lastname')) has-error @endif col-sm-6">
-                    <label for="lastname" class="control-label"> Apellidos </label>
-                        <input type="text"  name="lastname" class="form-control" value="{{ @$user->lastname}}" id="lastname" placeholder="Apellidos " required>
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('lastname') }}</strong>
-                        </span>
-                </div>
-
-
-                <div class="form-group  col-sm-6">
-                    <label for="email" class="control-label">Email </label>
-                        <input type="text"  name="email" class="form-control usuario__email @if($errors->first('email')) is-invalid  @endif"  value="{{ @$user->email}}"  id="email" placeholder="Email" required>
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                </div>
-
-
-                @if($rol =="administrador")
-                <div class="form-group  col-sm-8" required>
-                    <label for="agencia" class="control-label">Empresa</label>
-
-                    <select name="agencia"  class="form-control @if($errors->first('agencia')) has-error is-invalid @endif" id="agencia" >
-                        <option value="">Seleccione</option>
-                        @foreach($agencias as $agen)
-                        <option value="{{ $agen->id }}">{{ $agen->nombre }}</option>
-                        @endforeach
-                    </select>
-
-                    @error('agencia')
-                    <span class="error invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-                @else
-
-                        <input type="hidden" name="agencia" value="{{ @$usuario->adminunit->companyadminunit->company->nombre}}" >
-                        <input type="hidden" name="agencia_id" value="{{ @$usuario->adminunit->companyadminunit->company->id}}" id="getunidadadmin" >
-                @endif
-
-                 @if($rol =="administrador")
-                    <div class="form-group  col-sm-8" required>
-                        <label for="unidadnegocio" class="control-label">Unidad de negocio</label>
-
-                        <select name="unidadnegocio"  class="form-control @if($errors->first('unidadnegocio')) has-error  is-invalid @endif @if($rol !="administrador") getunidades @endif" id="unidadnegocio" >
-                            <option value="">Seleccione</option>
-
-                        </select>
-
-                        @error('unidadnegocio')
-                        <span class="error invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                @else
-                <input type="hidden" name="unidadnegocio" value="{{@$usuario->adminunit->unit_id}}">
-
-                @endif
-
-
-
-
-
-                <div class="form-group  col-sm-6">
-                    <label for="password" class="control-label">Clave</label>
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password">
-
-                        @error('password')
-                            <span class="invalid-feedback " role="alert">
-                                <strong>{{ $message }}</strong>
+                <div class="col-md-6">
+                    <div class="form-group  ">
+                        <label for="nombre" class="control-label">Nombres  </label>
+                            <input type="text"  name="nombre" class="form-control  @if($errors->first('nombre')) is-invalid @endif" value="{{ @$genero->nombre}}" id="name" placeholder="Nombres" required>
+                            <span class="error invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('nombre') }}</strong>
                             </span>
-                        @enderror
-
+                    </div>
                 </div>
 
-                <div class="form-group col-sm-6">
-                    <label for="password-confirm" class="control-label">Repita su clave</label>
 
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  autocomplete="new-password">
-
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombre" class="control-label">Icono  </label>
+                        <div class="custom-file">
+                            <input type="file" name="icono" id="customfile1" placeholder="Imagen" class="custom-file-input" aria-describedby="fileHelpId">
+                            <label for="customfile1" class="custom-file-label">Elija un icono</label>
+                        </div>
+                    
+                    </div>
                 </div>
 
+                @if(isset($genero->icono))
+                    <div class="col-md-12 text-center">
+                        <img src="/storage/{{@$genero->icono}}" width="70" class="img-thumbnail rounded mx-auto d-block">
+                    </div>
+                @endif
 
 
             </div>

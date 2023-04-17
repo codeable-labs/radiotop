@@ -90,7 +90,7 @@ class RegionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         Region::find($request->id)->delete();
         return redirect()->route('regiones.index')->with('info','Región eliminado con éxito');

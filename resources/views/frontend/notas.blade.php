@@ -4,9 +4,9 @@
 <section class="breadcrumb">
 	<div class="limit breadcrumb__inset">
 		<div class="breadcrumb__tail">
-			<a href="/">INICIO</a> / Radio TOP TV</span>
+			<a href="/">INICIO</a> / NOTAS DE PRENSA</span>
 		</div>
-		<h3 class="breadcrumb__title">Radio TOP TV</h3>
+		<h3 class="breadcrumb__title">NOTAS DE PRENSA</h3>
 	</div>
 </section>
 

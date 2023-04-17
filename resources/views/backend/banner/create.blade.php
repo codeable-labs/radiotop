@@ -8,13 +8,13 @@
             <div class="container-fluid">
               <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1>Nuevo género</h1>
+                  <h1>Nueva nota</h1>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/admin/generos">Géneros</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/regiones">Notas</a></li>
 
-                    <li class="breadcrumb-item active">Nuevo género</li>
+                    <li class="breadcrumb-item active">Nueva nota</li>
                   </ol>
                 </div>
               </div>
@@ -43,7 +43,7 @@
                                 </div>
                             @endif
 
-                          <form class="form-horizontal" action="{{ route('generos.store') }}" method="POST" enctype="multipart/form-data">
+                          <form class="form-horizontal" action="{{ route('banners.store') }}" method="POST" enctype="multipart/form-data">
 
                             <div class="card-header with-border">
 
@@ -51,15 +51,11 @@
 
                             <div class="card-body">
                                 @csrf
-
-
-                                @include('backend.genero.form.index')
-
-
+                                @include('backend.banner.form.index')
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('generos.index') }}" class="btn btn-back">Cancelar</a>
+                                <a href="{{ route('banners.index') }}" class="btn btn-back">Cancelar</a>
                                 <button type="submit" class="btn btn-info pull-right">Guardar</button>
                             </div>
                           </form>

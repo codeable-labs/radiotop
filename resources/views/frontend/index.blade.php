@@ -7,28 +7,24 @@
 			Descubre las canciones <br><strong>más escuchadas</strong> del Perú
 		</h1>
 		<div class="banner_principal__articles">
-			<article class="banner_principal__article m--blue">
-				<img src="/images/ranking_1_2023.png" alt="" class="banner_principal__article__image">
+			@foreach ($banners as $k=> $banner)
+
+			<article class="banner_principal__article {{$k%2==0?'m--blue':'m--orange'}}">
+				<img src="/storage/{{$banner->imagen}}" alt="" class="banner_principal__article__image">
 				<div class="banner_principal__article__content">
 					<div class="banner_principal__article__inside">
 						<!-- <strong class="banner_principal__article__number"></strong> -->
-						<strong class="banner_principal__article__title">#1 ANGLO <BR>2023</strong>
-						<p class="banner_principal__article__text"><strong>MILEY CYRUS</strong> FLOWERS</p>
-						<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="todos"],input[value="total"],input[value="anglo"]'>VER RANKING</a>
+						<strong class="banner_principal__article__title">{{$banner->titulo}}</strong>
+						<p class="banner_principal__article__text"><strong>{{$banner->autor}}</strong> {{$banner->cancion}}</p>
+						
+						<!--<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="todos"],input[value="total"],input[value="anglo"]'>VER RANKING</a>-->
+						<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="{{strtolower($banner->register->artist->nombre)}}"],input[value="{{strtolower($banner->register->region->nombre)}}"],input[value="{{strtolower($banner->register->gender->nombre)}}"]'>VER RANKING</a>
+					
 					</div>
 				</div>
 			</article>
-			<article class="banner_principal__article m--orange">
-				<img src="/images/ranking_2_2023.png" alt="" class="banner_principal__article__image">
-				<div class="banner_principal__article__content">
-					<div class="banner_principal__article__inside">
-						<!-- <span class="banner_principal__article__number">#1 Tropical Región SUR 2022</span> -->
-						<strong class="banner_principal__article__title">N# 13 Género Cumbia <br>N# Regiones Norte, Selva y Sur <br>Semana 7 </strong>
-						<p class="banner_principal__article__text"><strong>COSTA, SIERRA Y MONTAÑA</strong>Cuarteto Continental</p>
-						<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="todos"],input[value="total"],input[value="cumbia"]'>VER RANKING</a>
-					</div>
-				</div>
-			</article>
+			@endforeach
+			
 		</div>
 		<div class="banner_principal__sponsors">
 			<strong class="">Gracias a:</strong>

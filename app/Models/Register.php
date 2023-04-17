@@ -20,4 +20,8 @@ class Register extends Model
     public function gender(){
         return $this->belongsTo(Gender::class);
     }
+
+    public function banners(){
+        return $this->hasMany(Banner::class);
+    }
 }
