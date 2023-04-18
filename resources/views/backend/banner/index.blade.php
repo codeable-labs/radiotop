@@ -82,7 +82,7 @@
                                                
                                                 <td>{{$banner->created_at}}</td>
                                                 <td width="7%">
-                                                    <a href="/admin/notas/{{ @$banner->id }}/edit"
+                                                    <a href="/admin/banners/{{ @$banner->id }}/edit"
                                                         class="btn-xs btn btn-outline-info "><i class="far fa-edit"></i></a>
                                                     <a href="#" data-id="{{ @$banner->id }}" data-toggle="modal"
                                                         data-target="#delobjeto"
