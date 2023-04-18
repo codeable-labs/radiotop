@@ -40,7 +40,8 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        $banner = new Banner();
+
+       $banner = new Banner();
 
         if($request->file('imagen')){
             $path = $request->imagen->store('banner');
