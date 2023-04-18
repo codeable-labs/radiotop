@@ -121,7 +121,7 @@
         <div class="modal-dialog">
             <div class="modal-content bg-danger">
 
-                <form class="delete-objeto" action="/admin/regiones/delete" method="POST">
+                <form class="delete-objeto" action="/admin/banners/delete" method="POST">
                     @csrf
 
                     <div class="modal-header">
