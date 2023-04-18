@@ -52,8 +52,8 @@ class HomeController extends Controller
 
         foreach($notas as $nota){
             $posts[] = [
-                'dia'=> @strftime("%d", date (strtotime($nota->created_at )) ),
-                'mes'=>@strftime("%h", date (strtotime($nota->created_at )) ),
+                'dia'=> @strftime("%d", date (strtotime($nota->updated_at )) ),
+                'mes'=>@strftime("%h", date (strtotime($nota->updated_at )) ),
                 'titulo'=>$nota->titulo,
                 'descripcion'=>$nota->descripcion,
                 'imagen' => $nota->imagen,
