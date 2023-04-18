@@ -61,7 +61,7 @@
                         <select name="ranking" id="ranking" class="custom-select rounded-0">
                             <option value="">Seleccione</option>
                             @foreach ($rankings as $rank)
-                            <option value="{{$rank->id}}"  {{$rank->id==$banner->register_id?"selected":""}}>{{@$rank->artist->nombre}} {{@$rank->region->nombre}} {{@$rank->gender->nombre}}</option>
+                            <option value="{{$rank->id}}"  {{$rank->id==@$banner->register_id?"selected":""}}>{{@$rank->artist->nombre}} {{@$rank->region->nombre}} {{@$rank->gender->nombre}}</option>
                             @endforeach
                             
                         </select>
