@@ -12,6 +12,8 @@ use App\Models\Publicity;
 use App\Models\Post;
 use App\Models\Contact;
 use App\Models\Banner;
+use App\Models\Methodology;
+use App\Models\Block;
 
 use Illuminate\Support\Collection;
 
@@ -35,14 +37,19 @@ class HomeController extends Controller
 
     public function radioTop(){
 
+        $bloques = Block::all();
+        $publicidad3 = Publicity::where('place_id',3)->get();
+        $publicidad4 = Publicity::where('place_id',4)->get();
        
-        return view('frontend.radiotop');
+        return view('frontend.radiotop',['bloques'=>$bloques,'publicidad3'=>$publicidad3,'publicidad4'=>$publicidad4]);
         
     }
 
     public function metodologia(){
 
-        return view('frontend.metodologia');
+        $metodos = Methodology::orderBy('orden','desc')->get();
+        $bloques = Block::all();
+        return view('frontend.metodologia',['metodos'=>$metodos,'bloques'=>$bloques]);
         
     }
 

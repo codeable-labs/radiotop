@@ -126,3 +126,4 @@ function getValueArtista(){
     });
     return valor;
 }
+

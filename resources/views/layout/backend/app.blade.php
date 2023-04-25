@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="/backend/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/backend/plugins/summernote/summernote-bs4.min.css">
+
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -83,6 +86,7 @@
 <script src="/backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/backend/js/adminlte.js"></script>
+<script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backend/js/main.js?v={{uniqid()}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->

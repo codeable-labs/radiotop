@@ -11,6 +11,8 @@ use App\Http\Controllers\Backend\RegionController;
 use App\Http\Controllers\Backend\PostController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\BannerController;
+use App\Http\Controllers\Backend\MetodologiaController;
+use App\Http\Controllers\Backend\BloqueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +60,12 @@ Route::prefix('admin')->group(function(){
         'show'
     ]);
     Route::resource('banners',BannerController::class)->except([
+        'show'
+    ]);
+    Route::resource('bloques',BloqueController::class)->except([
+        'show'
+    ]);
+    Route::resource('metodologias',MetodologiaController::class)->except([
         'show'
     ]);
     Route::get('/contactos',[ContactController::class,'index']);

@@ -85,6 +85,21 @@
               <p>Anunciantes </p>
             </a>
           </li>
+
+
+          <li class="nav-item has-treeview ">
+            <a href="/admin/metodologias" class="nav-link {{{ (Request::is('admin/metodologias*') ? 'active' : '') }}}">
+
+              <p>Metodologias </p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="/admin/bloques" class="nav-link {{{ (Request::is('admin/bloques*') ? 'active' : '') }}}">
+
+              <p>Bloques de contenido </p>
+            </a>
+          </li>
          
         </ul>
 

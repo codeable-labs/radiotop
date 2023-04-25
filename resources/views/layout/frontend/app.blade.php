@@ -54,14 +54,14 @@
         
         @yield('content')
 
-
+       
         <footer class="footer">
             <div class="limit footer__inset">
                 <p class="footer__copy">Copyright @ 2023 Compañia. <br>Todos los derechos reservados.</p>
                 <p class="footer__social">
                     <span>Siguenos en:</span>
-                    <a href="https://www.instagram.com/radiotopperu/" target="_blank"><img src="/images/ico_instagram.svg" alt="" /></a>
-                    <a href="https://www.facebook.com/profile.php?id=100089813747204" target="_blank"><img src="/images/ico_facebook.svg" alt="" /></a>
+                    <a href="{{$bloque[2]->enlace}}" target="_blank"><img src="/images/ico_instagram.svg" alt="" /></a>
+                    <a href="{{$bloque[3]->enlace}}" target="_blank"><img src="/images/ico_facebook.svg" alt="" /></a>
                 </p>
             </div>
         </footer>
