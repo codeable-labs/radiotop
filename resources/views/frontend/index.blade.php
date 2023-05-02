@@ -21,7 +21,7 @@
 						<a 
 							href="/#ranking" 
 							class="button m--black fnSetRanking" 
-							data-ranking='input[name="artistas"][value="{{strtolower($banner->register->artist->nombre)}}"],input[name="region"][value="{{strtolower($banner->register->region->nombre)}}"],input[name="genero_musical"][value="{{strtolower($banner->register->gender->nombre)}}"]'
+							data-ranking='input[name="artistas"][value="{{strtolower($banner->register->artist->id)}}"],input[name="region"][value="{{strtolower($banner->register->region->id)}}"],input[name="genero_musical"][value="{{strtolower($banner->register->gender->id)}}"]'
 							>VER RANKING</a>
 					
 					</div>
