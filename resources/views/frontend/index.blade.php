@@ -18,7 +18,11 @@
 						<p class="banner_principal__article__text"><strong>{{$banner->autor}}</strong> {{$banner->cancion}}</p>
 						
 						<!--<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="todos"],input[value="total"],input[value="anglo"]'>VER RANKING</a>-->
-						<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="{{strtolower($banner->register->artist->nombre)}}"],input[value="{{strtolower($banner->register->region->nombre)}}"],input[value="{{strtolower($banner->register->gender->nombre)}}"]'>VER RANKING</a>
+						<a 
+							href="/#ranking" 
+							class="button m--black fnSetRanking" 
+							data-ranking='input[name="artistas"][value="{{strtolower($banner->register->artist->nombre)}}"],input[name="region"][value="{{strtolower($banner->register->region->nombre)}}"],input[name="genero_musical"][value="{{strtolower($banner->register->gender->nombre)}}"]'
+							>VER RANKING</a>
 					
 					</div>
 				</div>
