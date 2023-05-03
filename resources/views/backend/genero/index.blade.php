@@ -70,7 +70,7 @@
                                                 <th>{{$k+1}}</th>
                                                 <td>{{$genero->nombre}}</td>
                                                 <td><img src="/storage/{{$genero->icono}}" width="50"></td>
-                                                <td>{{$genero->created_at}}</td>
+                                                <td>{{$genero->updated_at}}</td>
                                                 
                                                 <td width="7%">
                                                     <a href="/admin/generos/{{ @$genero->id }}/edit"

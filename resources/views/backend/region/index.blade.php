@@ -71,7 +71,7 @@
                                                 <th>{{$k+1}}</th>
                                                 <td>{{$region->nombre}}</td>
                                                 <td><img src="/storage/{{@$region->icono}}" width="50"></td>
-                                                <td>{{$region->created_at}}</td>
+                                                <td>{{$region->updated_at}}</td>
                                                 <td width="7%">
                                                     <a href="/admin/regiones/{{ @$region->id }}/edit"
                                                         class="btn-xs btn btn-outline-info "><i class="far fa-edit"></i></a>
