@@ -160,19 +160,19 @@ class HomeController extends Controller
         $matriz = null;
             switch ($pos) {
                 case '1':
-                  $galleries = Publicity::where('place_id',1)->get();
+                  $galleries = Publicity::inRandomOrder()->where('place_id',1)->get();
                 break;
 
                 case '2':
-                    $galleries = Publicity::where('place_id',2)->get();
+                    $galleries = Publicity::inRandomOrder()->where('place_id',2)->get();
                 break;
 
                 case '3':
-                    $galleries = Publicity::where('place_id',3)->get();
+                    $galleries = Publicity::inRandomOrder()->where('place_id',3)->get();
                 break;
 
                 case '4':
-                    $galleries = Publicity::where('place_id',4)->get();
+                    $galleries = Publicity::inRandomOrder()->where('place_id',4)->get();
                 break;
                 
               
