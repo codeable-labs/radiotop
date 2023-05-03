@@ -34,6 +34,43 @@
                             @endforeach
                         </select>
                 </div>
+
+
+                <div class="form-group @if($errors->first('mes')) has-error @endif">
+                    <label for="mes" class="control-label"> Mes </label>
+                        <select name="mes" id="mes" class="form-control">
+                            <option value="">Seleccione</option>
+                           
+                                <option value="Enero" {{@$ranking->mes=="Enero"?"selected":''}}>Enero</option>
+                                <option value="Febrero" {{@$ranking->mes=="Febrero"?"selected":''}}>Febrero</option>
+                                <option value="Marzo" {{@$ranking->mes=="Marzo"?"selected":''}}>Marzo</option>
+                                <option value="Abril" {{@$ranking->mes=="Abril"?"selected":''}}>Abril</option>
+                                <option value="Mayo" {{@$ranking->mes=="Mayo"?"selected":''}}>Mayo</option>
+                                <option value="Junio" {{@$ranking->mes=="Junio"?"selected":''}}>Junio</option>
+                                <option value="Julio" {{@$ranking->mes=="Julio"?"selected":''}}>Julio</option>
+                                <option value="Agosto" {{@$ranking->mes=="Agosto"?"selected":''}}>Agosto</option>
+                                <option value="Setiembre" {{@$ranking->mes=="Setiembre"?"selected":''}}>Setiembre</option>
+                                <option value="Octubre" {{@$ranking->mes=="Octubre"?"selected":''}}>Octubre</option>
+                                <option value="Noviembre" {{@$ranking->mes=="Noviembre"?"selected":''}}>Noviembre</option>
+                                <option value="Diciembre" {{@$ranking->mes=="Diciembre"?"selected":''}}>Diciembre</option>
+                           
+                        </select>
+                </div>
+
+
+                <div class="form-group @if($errors->first('year')) has-error @endif">
+                    <label for="year" class="control-label"> Año </label>
+                        <select name="year" id="year" class="form-control">
+                            <option value="">Seleccione</option>
+                            @for($i=2022;$i<2035;$i++)
+
+                                <option value="{{$i}}" {{$i==@$ranking->year?"selected":''}}>{{$i}}</option>
+                           
+                            @endfor
+                        </select>
+                </div>
+
+
             </div>
 
             <div class="col-md-6">

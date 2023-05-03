@@ -88,7 +88,7 @@ function obtenerDatos(region,genero,artista){
             $('.fnRankingName').html(response.title);
             $('.fnRankingButtonDownload').attr('href', '/storage/'+response.archivo);
             $('.fnRankingButtonDetail').attr('href', '/ranking/'+response.genero+'/'+response.region+'/'+response.artista);
-
+            $(".fnRankingDate").html(response.fecha);
         }
     });
 }

@@ -16,7 +16,7 @@
 		</div>
 		<a href="{{$publicidad4[0]->url}}">
 			<picture class="ranking_resultados__advertise">
-				<source media="(max-width:800px)" srcset="{{$publicidad3[0]->movil}}">
+				<source media="(max-width:800px)" srcset="/storage/{{$publicidad3[0]->movil}}">
 				<img src="/storage/{{$publicidad3[0]->imagen}}" alt="" loading="lazy" />
 			</picture>
 		</a>

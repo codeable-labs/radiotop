@@ -57,6 +57,8 @@ class RankingController extends Controller
         $registro->region_id = $request->region;
         $registro->gender_id = $request->genero;
 
+        $registro->mes = $request->mes;
+        $registro->year = $request->year;
         if($request->file('archivo')){
             $path = $request->archivo->store('ranking');
             $registro->archivo  = $path;
@@ -100,6 +102,8 @@ class RankingController extends Controller
         $registro->artist_id = $request->artista;
         $registro->region_id = $request->region;
         $registro->gender_id = $request->genero;
+        $registro->mes = $request->mes;
+        $registro->year = $request->year;
         if($request->file('archivo')){
             $path = $request->archivo->store('ranking');
             $registro->archivo  = $path;

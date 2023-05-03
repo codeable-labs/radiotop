@@ -132,7 +132,8 @@ class HomeController extends Controller
                 "region"=>$registro->region->nombre,
                 "artista"=>@$registro->artist->nombre,
                 "icono_genero"=>@$registro->gender->icono,
-                "icono_region"=>@$registro->region->icono
+                "icono_region"=>@$registro->region->icono,
+                "fecha"=>@$registro->mes." ".$registro->year
             ];
         }
 
