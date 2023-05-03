@@ -114,7 +114,7 @@
 	<div class="limit">
 		<h3 class="title">Radio TOP TV</h3>
 		<div class="video_radiotop__content">
-			<iframe class="video_radiotop__video" src="https://www.youtube.com/embed/2_D8K1esSo0" title="Radio TOP TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="video_radiotop__video" src="{{$bloques[4]->enlace}}" title="Radio TOP TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<div class="video_radiotop__advertises">
 				<picture class="video_radiotop__advertise">
 					<source media="(max-width:800px)" srcset="/storage/{{$publicidad1[0]->imagen}}">
