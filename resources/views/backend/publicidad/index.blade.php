@@ -72,7 +72,7 @@
                                                 <th>{{$key+1}}</th>
                                                 <td><img src="/storage/{{$row->imagen}}" width="50"></td>
                                                 <td>{{$row->place->nombre}}</td>
-                                                <td>{{$row->created_at}}</td>
+                                                <td>{{$row->updated_at}}</td>
                                                 <td width="7%">
                                                     <a href="/admin/publicidad/{{ @$row->id }}/edit"
                                                         class="btn-xs btn btn-outline-info "><i class="far fa-edit"></i></a>
