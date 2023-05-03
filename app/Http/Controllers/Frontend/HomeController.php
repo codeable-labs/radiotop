@@ -30,8 +30,9 @@ class HomeController extends Controller
         $publicidad2 = Publicity::where('place_id',2)->get();
 
         $banners = Banner::orderBy('id','asc')->get();
+        $bloques = Block::all();
 
-        return view('frontend.index',['banners'=>$banners,'artistas'=>$artistas,'generos'=>$generos,'regiones'=>$regiones,'publicidad1'=>$publicidad1,'publicidad2'=>$publicidad2]);
+        return view('frontend.index',['bloques'=>$bloques,'banners'=>$banners,'artistas'=>$artistas,'generos'=>$generos,'regiones'=>$regiones,'publicidad1'=>$publicidad1,'publicidad2'=>$publicidad2]);
 
     }
 
