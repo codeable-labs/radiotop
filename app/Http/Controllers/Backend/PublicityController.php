@@ -55,6 +55,10 @@ class PublicityController extends Controller
             $path = $request->imagen->store('publicidad');
             $registro->imagen  = $path;
        }
+        if($request->file('movil')){
+            $path2 = $request->movil->store('publicidad');
+            $registro->movil  = $path2;
+        }
 
 
         $registro->save();
@@ -94,7 +98,12 @@ class PublicityController extends Controller
         if($request->file('imagen')){
             $path = $request->imagen->store('publicidad');
             $registro->imagen  = $path;
-       }
+        }
+
+       if($request->file('movil')){
+            $path2 = $request->movil->store('publicidad');
+            $registro->movil  = $path2;
+        }
 
         $registro->save();
 

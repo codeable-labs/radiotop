@@ -56,6 +56,7 @@
                                     <tr>
                                         <th></th>
                                         <th>Nombres</th>
+                                        <th>Icono</th>
                                         <th>Fecha</th>
                                         <th></th>
                                     </tr>
@@ -69,6 +70,7 @@
                                                 
                                                 <th>{{$k+1}}</th>
                                                 <td>{{$region->nombre}}</td>
+                                                <td><img src="/storage/{{@$region->icono}}" width="50"></td>
                                                 <td>{{$region->created_at}}</td>
                                                 <td width="7%">
                                                     <a href="/admin/regiones/{{ @$region->id }}/edit"

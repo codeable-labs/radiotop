@@ -47,6 +47,7 @@ class BannerController extends Controller
             $path = $request->imagen->store('banner');
             $banner->imagen  = $path;
         }
+       
 
         $banner->titulo = $request->titulo;
         $banner->autor = $request->autor;

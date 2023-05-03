@@ -43,7 +43,7 @@
                                 </div>
                             @endif
 
-                          <form class="form-horizontal" action="{{ route('notas.store') }}" method="POST" enctype="multipart/form-data">
+                          <form class="form-horizontal" action="{{ route('bloques.store') }}" method="POST" enctype="multipart/form-data">
 
                             <div class="card-header with-border">
 
@@ -51,11 +51,11 @@
 
                             <div class="card-body">
                                 @csrf
-                                @include('backend.notas.form.index')
+                                @include('backend.bloques.form.index')
                             </div>
 
                             <div class="card-footer">
-                                <a href="{{ route('notas.index') }}" class="btn btn-back">Cancelar</a>
+                                <a href="{{ route('bloques.index') }}" class="btn btn-back">Cancelar</a>
                                 <button type="submit" class="btn btn-info pull-right">Guardar</button>
                             </div>
                           </form>

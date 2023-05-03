@@ -47,7 +47,7 @@ class HomeController extends Controller
 
     public function metodologia(){
 
-        $metodos = Methodology::orderBy('orden','desc')->get();
+        $metodos = Methodology::orderBy('orden','asc')->get();
         $bloques = Block::all();
         return view('frontend.metodologia',['metodos'=>$metodos,'bloques'=>$bloques]);
         
@@ -128,9 +128,11 @@ class HomeController extends Controller
             $datos = [
                 "archivo" => @$registro->archivo,
                 "title" => @$registro->artist->nombre."/".$registro->region->nombre,
-                "genero"=>@$registro->gender->nombre?$registro->gender->nombre:'empty',
+                "genero"=>@$registro->gender->slug?$registro->gender->slug:'empty',
                 "region"=>$registro->region->nombre,
                 "artista"=>@$registro->artist->nombre,
+                "icono_genero"=>@$registro->gender->icono,
+                "icono_region"=>@$registro->region->icono
             ];
         }
 

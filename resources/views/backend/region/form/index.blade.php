@@ -11,6 +11,28 @@
                                 <strong>{{ $errors->first('nombre') }}</strong>
                             </span>
                     </div>
+
+                    
+
+                </div>
+                <div class="col-md-6">
+                    <label for="nombre" class="control-label">Icono  </label>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" name="icono" id="customfile1" placeholder="Icono" class="custom-file-input" aria-describedby="fileHelpId">
+                                <label for="customfile1" class="custom-file-label">Icono</label>
+                            </div>
+                        
+                        </div>
+                    </div>
+    
+                    @if(isset($region->icono))
+                    
+                        <div class="col-md-12 text-center">
+                            <img src="/storage/{{@$region->icono}}" width="70" class="img-thumbnail rounded mx-auto d-block">
+                        </div>
+                    @endif
                 </div>
 
             </div>

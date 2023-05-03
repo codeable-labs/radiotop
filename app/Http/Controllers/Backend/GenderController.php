@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gender;
+use Illuminate\Support\Str;
 
 class GenderController extends Controller
 {
@@ -45,6 +46,7 @@ class GenderController extends Controller
         $genero = new Gender();
 
         $genero->nombre = $request->nombre;
+        $genero->slug =  Str::slug($request->nombre,'-');
         
         if($request->file('icono')){
             $path = $request->icono->store('icono');
@@ -82,6 +84,7 @@ class GenderController extends Controller
         $genero = Gender::find($id);
 
         $genero->nombre = $request->nombre;
+        $genero->slug =  Str::slug($request->nombre,'-');
         
         if($request->file('icono')){
             $path = $request->icono->store('icono');

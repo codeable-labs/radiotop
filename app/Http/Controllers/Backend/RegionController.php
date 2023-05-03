@@ -46,6 +46,11 @@ class RegionController extends Controller
 
         $region->nombre = $request->nombre;
 
+        if($request->file('icono')){
+            $path = $request->icono->store('region');
+            $region->icono  = $path;
+        }
+
         $region->save();
 
         return redirect()->route('regiones.index')->with('info','Región creada');
@@ -78,6 +83,10 @@ class RegionController extends Controller
         $region =  Region::find($id);
 
         $region->nombre = $request->nombre;
+        if($request->file('icono')){
+            $path = $request->icono->store('region');
+            $region->icono  = $path;
+        }
 
         $region->save();
 

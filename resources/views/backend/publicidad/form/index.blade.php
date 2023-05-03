@@ -43,6 +43,25 @@
                 @endif
 
 
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" name="movil" id="customfile2" placeholder="Imagen móvil" class="custom-file-input" aria-describedby="fileHelpId">
+                            <label for="customfile2" class="custom-file-label">Elija una imagen móvil</label>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                @if(isset($publicidad->movil))
+                
+                    <div class="col-md-12 text-center">
+                        <img src="/storage/{{@$publicidad->movil}}" width="100" class="img-thumbnail rounded mx-auto d-block">
+                    </div>
+                @endif
+
+
+
             </div>
         </div>
     </div>

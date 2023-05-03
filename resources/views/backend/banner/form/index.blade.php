@@ -17,10 +17,12 @@
 
                 @if(isset($banner->imagen))
                 
-                <div class="col-md-12 text-center">
-                    <img src="/storage/{{@$banner->imagen}}" width="70" class="img-thumbnail rounded mx-auto d-block">
-                </div>
-            @endif
+                    <div class="col-md-12 text-center">
+                        <img src="/storage/{{@$banner->imagen}}" width="70" class="img-thumbnail rounded mx-auto d-block">
+                    </div>
+                @endif
+
+
 
            
 

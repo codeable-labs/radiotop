@@ -58,8 +58,10 @@ class BloqueController extends Controller
      */
     public function edit($id)
     {
-        $bloque = Block::find($id);
-        return view('backend.bloque.edit',['bloque'=>$bloque]);
+        $item = Block::find($id);
+       
+      
+        return view('backend.bloque.edit',['item'=>$item]);
     }
 
     /**

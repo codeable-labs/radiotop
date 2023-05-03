@@ -29,9 +29,9 @@
             <!-- general form elements -->
             <div class="card card-primary">
 
+              
 
-
-              <form role="form" action="{{ route('bloques.update',$bloque->id) }}" method="POST" enctype="multipart/form-data">
+              <form role="form" action="{{ route('bloques.update',$item->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
 
                     @csrf
