@@ -37,6 +37,9 @@ Route::post('/contacto', [Home::Class,'contacto'])->name('home.contacto');
 
 Route::post('/get-result',[Home::class,'getResult']);
 
+Route::get('/get-publicidad/{pos}',[Home::class,'getPublicidad']);
+Route::post('/set-data',[Home::class,'setImpresion']);
+
 Auth::routes();
 
 Route::prefix('admin')->group(function(){

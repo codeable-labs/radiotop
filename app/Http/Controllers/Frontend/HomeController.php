@@ -153,4 +153,47 @@ class HomeController extends Controller
 
 
     }
+
+    public function getPublicidad($pos){
+
+        $galleries = null;
+        $matriz = null;
+            switch ($pos) {
+                case '1':
+                  $galleries = Publicity::where('place_id',1)->get();
+                break;
+
+                case '2':
+                    $galleries = Publicity::where('place_id',2)->get();
+                break;
+
+                case '3':
+                    $galleries = Publicity::where('place_id',3)->get();
+                break;
+
+                case '4':
+                    $galleries = Publicity::where('place_id',4)->get();
+                break;
+                
+              
+            }
+            if($galleries != null){
+                foreach($galleries as $gal){
+                    $matriz[] = ["id"=>$gal->id,"imagen"=>$gal->imagen,"url"=>$gal->url];
+                }
+            }
+
+            return response()->json($matriz);
+    }
+
+    public function setImpresion(Request $request){
+        $publicidad = Publicity::find($request->id);
+
+        $conteo  = $publicidad->impresiones+1;
+
+        $publicidad->impresiones = $conteo;
+        $publicidad->save();
+
+        return response()->json(['status'=>'sucess','code'=>'200']);
+    }
 }
