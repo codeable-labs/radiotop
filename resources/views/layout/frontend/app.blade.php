@@ -38,11 +38,11 @@
                 </a>
                 
                 <nav class="header__nav fnHeaderNav">
-                    <a href="/#ranking" class="header__nav__link -active-">Ranking</a>
-                    <a href="/radio-top-tv" class="header__nav__link">Radio Top TV</a>
-                    <a href="/metodologia" class="header__nav__link">Metodología</a>
-                    <a href="/notas-de-prensa" class="header__nav__link">Notas de <br>prensa</a>
-                    <a href="/anuncia-con-nosotros" class="header__nav__link">Anuncia con<br>Nosotros</a>
+                    <a href="/#ranking" class="header__nav__link {{{ (Request::is('/#ranking') ? '-active-' : '') }}}">Ranking</a>
+                    <a href="/radio-top-tv" class="header__nav__link  {{{ (Request::is('radio-top-tv') ? '-active-' : '') }}}">Radio Top TV</a>
+                    <a href="/metodologia" class="header__nav__link  {{{ (Request::is('metodologia') ? '-active-' : '') }}}">Metodología</a>
+                    <a href="/notas-de-prensa" class="header__nav__link  {{{ (Request::is('notas-de-prensa') ? '-active-' : '') }}}">Notas de <br>prensa</a>
+                    <a href="/anuncia-con-nosotros" class="header__nav__link  {{{ (Request::is('anuncia-con-nosotros') ? '-active-' : '') }}}">Anuncia con<br>Nosotros</a>
                 </nav>
                 <span class="header__button fnHeaderButton"><span></span></span>
                
