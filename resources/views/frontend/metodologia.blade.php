@@ -1,6 +1,15 @@
 @extends('layout.frontend.app')
 @section('content')
 
+<section class="breadcrumb">
+	<div class="limit breadcrumb__inset">
+		<div class="breadcrumb__tail">
+			<a href="/">INICIO</a> / Metodología</span>
+		</div>
+		<h3 class="breadcrumb__title">Metodología</h3>
+	</div>
+</section>
+
 <section class="section metodologia">
 	<div class="limit m--mini">
 
@@ -19,7 +28,7 @@
 
 		@endforeach
 
-	
+
 	</div>
 </section>
 
