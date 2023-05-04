@@ -94,7 +94,7 @@ class BannerController extends Controller
         $banner->titulo = $request->titulo;
         $banner->autor = $request->autor;
         $banner->cancion = $request->cancion;
-        $banner->register_id = $request->ranking;
+       
         $banner->save();
 
 
