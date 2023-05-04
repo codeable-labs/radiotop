@@ -547,10 +547,12 @@ select {
     opacity: 0;
     transition: opacity ease 0.25s;
   }
-  .header__nav__link:hover {
+  .header__nav__link:hover, 
+  .header__nav__link.-active- {
     color: var(--black-color);
   }
-  .header__nav__link:hover:after {
+  .header__nav__link:hover:after,
+  .header__nav__link.-active-:after {
     opacity: 1;
   }
 }

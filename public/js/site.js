@@ -62,47 +62,6 @@ const site = (function(){
 					$(target).trigger('click');
 				});
 
-			$('.fnRankingOption')
-				.on('click', function(){
-
-					const region_options = $('.fnRegionOptions');
-					const genero_musical_options = $('.fnGeneroMusicalOptions');
-					const artistas = $('[name="artistas"]:checked');
-					const region = $('[name="region"]:checked');
-					const genero_musical = $('[name="genero_musical"]:checked');
-
-					const isPeruanos = artistas.val() === 'peruanos';
-
-					isPeruanos ? genero_musical_options.addClass('-disable-') : genero_musical_options.removeClass('-disable-') ;
-
-					let isRankingOptionsComplete = (artistas.length>0 && genero_musical.length>0 && region.length>0);
-					isRankingOptionsComplete = (artistas.length>0 && region.length>0 && isPeruanos) || isRankingOptionsComplete;
-					
-					
-					if ( !isRankingOptionsComplete && !isPeruanos ) return;	
-
-					const query = { 
-						artistas : artistas.val(),
-						region: region.val(), 
-						genero_musical: isPeruanos ? 'empty' : genero_musical.val()
-					};
-
-					/*$.ajax({ url: '/get_ranking.php', type: 'POST', dataType: 'json', data: query, })
-						.done(function(response) {
-							if ( response.data !== 'empty' ) {
-								
-								const title = getCardTitle(artistas, '') + getCardTitle(region) + getCardTitle(genero_musical, ' / ',artistas.val());
-
-								$('.fnRankingResults').removeClass('m--empty');
-								$('.fnRankingGenderImage').attr('src', 'assets/public/images/'+genero_musical.val()+'.png');
-								$('.fnRankingName').html(title);
-								$('.fnRankingButtonDownload').attr('href', response.data);
-								$('.fnRankingButtonDetail').attr('href', '/ranking.php?genero_musical='+query.genero_musical+'&region='+query.region+'&artistas='+query.artistas);
-							}
-						});*/
-
-				});
-
 		},
 
 		metodologia : function() {
