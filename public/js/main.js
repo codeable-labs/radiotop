@@ -63,7 +63,6 @@ function obtenerDatos() {
         
         if( response!="" && Object.keys(response).length>0 ){
 
-            console.log(response)
             $('.fnRankingResults').removeClass('m--empty');
             
             if(response.genero=="empty"){
