@@ -52,9 +52,10 @@
                                         <th></th>
                                         <th>Nombre</th>
                                         <th>Email</th>
-                                        <th>Empresa</th>
-                                        <th>RUC</th>
-                                        <th>Sector</th>
+                                        <th>Nombre artista,banda o conjunto</th>
+                                        <th>Departamento</th>
+                                        <th>Provincia</th>
+                                        <th>Distrito</th>
                                         <th>Fecha</th>
                                         
                                     </tr>
@@ -69,8 +70,9 @@
                                                 <td>{{$row->nombres}}</td>
                                                 <td>{{$row->email}}</td>
                                                 <td>{{$row->empresa}}</td>
-                                                <td>{{$row->ruc}}</td>
-                                                <td>{{$row->sector}}</td>
+                                                <td>{{$row->departamento}}</td>
+                                                <td>{{$row->provincia}}</td>
+                                                <td>{{$row->distrito}}</td>
 
                                                 <td>{{$row->created_at}}</td>
                                                 

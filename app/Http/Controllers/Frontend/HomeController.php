@@ -150,6 +150,9 @@ class HomeController extends Controller
         $contacto->empresa = $request->business_name;
         $contacto->ruc = $request->ruc;
         $contacto->sector = $request->sector;
+        $contacto->departamento = $request->departamento;
+        $contacto->provincia = $request->provincia;
+        $contacto->distrito = $request->distrito;
 
         $contacto->save();
 
