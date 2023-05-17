@@ -4,9 +4,9 @@
 <section class="breadcrumb">
 	<div class="limit breadcrumb__inset">
 		<div class="breadcrumb__tail">
-			<a href="/">INICIO</a> / Metodología</span>
+			<a href="/">INICIO</a> / Sobre nosotros</span>
 		</div>
-		<h3 class="breadcrumb__title">Metodología</h3>
+		<h3 class="breadcrumb__title">Sobre nosotros</h3>
 	</div>
 </section>
 

@@ -1,7 +1,6 @@
 var artistas = document.querySelectorAll(".input__artista");
 var regiones  = document.querySelectorAll(".input__region");
 var generos = document.querySelectorAll(".input__genero");
-console.log( artistas )
 
 const RANKING_VALUES = {}
 
@@ -114,3 +113,30 @@ function getValueArtista(){
     return valor;
 }
 
+const $_ubigeo_selects = document.querySelectorAll('.fnSelect')
+$_ubigeo_selects.forEach(select => {
+    select.addEventListener( 'change', function() {
+        const params = {
+            target: this.dataset.target,
+            ubigeo: this.options[this.selectedIndex].dataset.ubigeo,
+            clean: this.dataset.clean
+        }
+        setUbigeo(params)
+    })
+});
+
+setUbigeo({target:'departamentos'})
+
+function setUbigeo( {target, ubigeo, clean} ) {
+    if ( !target ) return
+    fetch('/js/'+target+'.json')
+        .then((response) => response.json())
+        .then((json) => {
+            const empty_option = '<option value="">Seleccionar</option>'
+            const array_options = ubigeo ? json[ubigeo] : json
+            const options = array_options.map( ({nombre_ubigeo, id_ubigeo}) => `<option value="${nombre_ubigeo}" data-ubigeo="${id_ubigeo}">${nombre_ubigeo}</option>` ).join('')
+            const $target = document.getElementById(target)
+            $target.innerHTML = empty_option+options
+            clean && ( document.getElementById(clean).innerHTML = empty_option)
+        })
+}

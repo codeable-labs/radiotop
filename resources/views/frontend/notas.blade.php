@@ -4,9 +4,9 @@
 <section class="breadcrumb">
 	<div class="limit breadcrumb__inset">
 		<div class="breadcrumb__tail">
-			<a href="/">INICIO</a> / NOTAS DE PRENSA</span>
+			<a href="/">INICIO</a> / Radar RadioTOP</span>
 		</div>
-		<h3 class="breadcrumb__title">NOTAS DE PRENSA</h3>
+		<h3 class="breadcrumb__title">Radar RadioTOP</h3>
 	</div>
 </section>
 
@@ -14,10 +14,10 @@
 
 <section class="section notas_de_prensa">
 	<div class="limit m--mini">
-		
+
 		@foreach ($notas as $item)
-			
-		
+
+
 		<article class="notas_de_prensa__item">
 			<figure class="notas_de_prensa__item__figure">
 				<img class="notas_de_prensa__item__figure__image" src="/storage/{{$item['imagen']}}" alt="" />
@@ -31,8 +31,8 @@
 		</article>
 
 		@endforeach
-		
-		
+
+
 	</div>
 </section>
 

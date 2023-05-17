@@ -40,11 +40,11 @@
             </a>
             @if ( !str_contains( $_SERVER['REQUEST_URI'], 'ranking/') )
             <nav class="header__nav fnHeaderNav">
-                <a href="/#ranking" class="header__nav__link {{{ (Request::is('/#ranking') ? '-active-' : '') }}}">Ranking</a>
+                <a href="/#ranking" class="header__nav__link {{{ (Request::is('/#ranking') ? '-active-' : '') }}}">Rankings</a>
                 <a href="/radio-top-tv" class="header__nav__link  {{{ (Request::is('radio-top-tv') ? '-active-' : '') }}}">Radio Top TV</a>
-                <a href="/metodologia" class="header__nav__link  {{{ (Request::is('metodologia') ? '-active-' : '') }}}">Metodología</a>
-                <a href="/notas-de-prensa" class="header__nav__link  {{{ (Request::is('notas-de-prensa') ? '-active-' : '') }}}">Notas de <br>prensa</a>
-                <a href="/anuncia-con-nosotros" class="header__nav__link  {{{ (Request::is('anuncia-con-nosotros') ? '-active-' : '') }}}">Anuncia con<br>Nosotros</a>
+                <a href="/metodologia" class="header__nav__link  {{{ (Request::is('metodologia') ? '-active-' : '') }}}">Sobre nosotros</a>
+                <a href="/notas-de-prensa" class="header__nav__link  {{{ (Request::is('notas-de-prensa') ? '-active-' : '') }}}">Radar RadioTOP</a>
+                <a href="/anuncia-con-nosotros" class="header__nav__link  {{{ (Request::is('anuncia-con-nosotros') ? '-active-' : '') }}}">Nuestros servicios</a>
             </nav>
             <span class="header__button fnHeaderButton"><span></span></span>
             @else
@@ -73,7 +73,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <script src="/js/site.js?v={{uniqid()}}"></script>
-    <script src="/js/main.js?v={{uniqid()}}"></script>
+    <script src="/js/main.js?v={{uniqid()}}" type="module"></script>
 </body>
 
 </html>
