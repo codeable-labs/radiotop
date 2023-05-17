@@ -44,7 +44,7 @@
                 <a href="/radio-top-tv" class="header__nav__link  {{{ (Request::is('radio-top-tv') ? '-active-' : '') }}}">Radio Top TV</a>
                 <a href="/sobre-nosotros" class="header__nav__link  {{{ (Request::is('sobre-nosotros') ? '-active-' : '') }}}">Sobre nosotros</a>
                 <a href="/radar-radiotop" class="header__nav__link  {{{ (Request::is('radar-radiotop') ? '-active-' : '') }}}">Radar RadioTOP</a>
-                <a href="/nuestros-servicios" class="header__nav__link  {{{ (Request::is('nuestros-servicio') ? '-active-' : '') }}}">Nuestros servicios</a>
+                <a href="/nuestros-servicios" class="header__nav__link  {{{ (Request::is('nuestros-servicios') ? '-active-' : '') }}}">Nuestros servicios</a>
             </nav>
             <span class="header__button fnHeaderButton"><span></span></span>
             @else

@@ -28,7 +28,7 @@ use App\Http\Controllers\Backend\BloqueController;
 Route::get('/', [Home::Class,'index']);
 Route::get('/radio-top-tv', [Home::Class,'radioTop']);
 Route::get('/sobre-nosotros', [Home::Class,'metodologia']);
-Route::get('/radar-top', [Home::Class,'notasPrensa']);
+Route::get('/radar-radiotop', [Home::Class,'notasPrensa']);
 Route::get('/nuestros-servicios', [Home::Class,'anunciaNosotros'])->name('home.anuncia');
 Route::get('/rankings', [Home::Class,'ranking']);
 Route::get('/rankings/{genero}/{region}/{artista}',[Home::class,'detalle']);
