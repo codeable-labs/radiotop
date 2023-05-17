@@ -40,11 +40,11 @@
             </a>
             @if ( !str_contains( $_SERVER['REQUEST_URI'], 'ranking/') )
             <nav class="header__nav fnHeaderNav">
-                <a href="/#ranking" class="header__nav__link {{{ (Request::is('/#ranking') ? '-active-' : '') }}}">Rankings</a>
+                <a href="/#rankings" class="header__nav__link {{{ (Request::is('/#rankings') ? '-active-' : '') }}}">Rankings</a>
                 <a href="/radio-top-tv" class="header__nav__link  {{{ (Request::is('radio-top-tv') ? '-active-' : '') }}}">Radio Top TV</a>
-                <a href="/metodologia" class="header__nav__link  {{{ (Request::is('metodologia') ? '-active-' : '') }}}">Sobre nosotros</a>
-                <a href="/notas-de-prensa" class="header__nav__link  {{{ (Request::is('notas-de-prensa') ? '-active-' : '') }}}">Radar RadioTOP</a>
-                <a href="/anuncia-con-nosotros" class="header__nav__link  {{{ (Request::is('anuncia-con-nosotros') ? '-active-' : '') }}}">Nuestros servicios</a>
+                <a href="/sobre-nosotros" class="header__nav__link  {{{ (Request::is('sobre-nosotros') ? '-active-' : '') }}}">Sobre nosotros</a>
+                <a href="/radar-radiotop" class="header__nav__link  {{{ (Request::is('radar-radiotop') ? '-active-' : '') }}}">Radar RadioTOP</a>
+                <a href="/nuestros-servicios" class="header__nav__link  {{{ (Request::is('nuestros-servicio') ? '-active-' : '') }}}">Nuestros servicios</a>
             </nav>
             <span class="header__button fnHeaderButton"><span></span></span>
             @else
