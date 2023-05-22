@@ -73,7 +73,11 @@
                                                 
                                                 <th>{{$key+1}}</th>
                                                 <td><img src="/storage/{{@$row->imagen}}" width="50"></td>
-                                                <td><img src="/storage/{{@$row->movil}}" width="50"></td>
+                                                <td>
+                                                    @if(isset($row->movil))
+                                                    <img src="/storage/{{@$row->movil}}" width="50">
+                                                    @endif
+                                                </td>
                                                 <td>{{$row->place->nombre}}</td>
                                                 <td>{{@$row->impresiones}}</td>
                                                 <td>{{@$row->url}}</td>
