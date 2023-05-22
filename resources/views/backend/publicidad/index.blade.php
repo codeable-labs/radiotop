@@ -55,9 +55,11 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>Imagen</th>
+                                        <th>Imagen desktop</th>
+                                        <th>Imagen Movil</th>
                                         <th>Lugar</th>
-                                        
+                                        <th>Impresiones</th>
+                                        <th>URL</th>
                                         <th>Fecha</th>
                                         <th></th>
                                     </tr>
@@ -70,8 +72,11 @@
                                             <tr>
                                                 
                                                 <th>{{$key+1}}</th>
-                                                <td><img src="/storage/{{$row->imagen}}" width="50"></td>
+                                                <td><img src="/storage/{{@$row->imagen}}" width="50"></td>
+                                                <td><img src="/storage/{{@$row->movil}}" width="50"></td>
                                                 <td>{{$row->place->nombre}}</td>
+                                                <td>{{@$row->impresiones}}</td>
+                                                <td>{{@$row->url}}</td>
                                                 <td>{{$row->updated_at}}</td>
                                                 <td width="7%">
                                                     <a href="/admin/publicidad/{{ @$row->id }}/edit"
