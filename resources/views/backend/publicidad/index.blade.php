@@ -56,7 +56,7 @@
                                     <tr>
                                         <th></th>
                                         <th>Imagen desktop</th>
-                                        <th>Imagen Movil</th>
+                                        <th>Imagen móvil</th>
                                         <th>Lugar</th>
                                         <th>Impresiones</th>
                                         <th>URL</th>
