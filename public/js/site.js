@@ -40,6 +40,7 @@ const site = (function(){
 		events.ranking();
 		events.metodologia();
 		events.forms();
+		events.advertising();
 	
 	};
 
@@ -62,6 +63,30 @@ const site = (function(){
 					$(target).trigger('click');
 				});
 
+		},
+
+		advertising : function() {
+			const Images = $('.fnRandomImage')
+			const token = $('meta[name="csrf-token"]').attr('content')
+			const data = {'_method':'POST', '_token':token}
+			const path = 'http://radiotop.dev-limprod.com'
+			Images.each(function(index, image) {
+				const $image = $(image)
+				const ID = $image.data('id')
+				$.get(path+'/get-publicidad/'+ID, function(response) {
+					const render = Array.isArray(response) ? response[0] : response
+					$image.find('img').attr('src', path+'/storage/'+render.imagen)
+					$image.find('source').attr('srcset', path+'/storage/'+render.imagen)
+					$image.attr('href', render.url)
+					data.id = render.id
+					$.ajax({
+						url: '/set-data',
+						type: 'POST',
+						data: data
+					})
+					.done(function(response) {})
+				})
+			})
 		},
 
 		metodologia : function() {

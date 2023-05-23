@@ -16,19 +16,15 @@
 						<!-- <strong class="banner_principal__article__number"></strong> -->
 						<strong class="banner_principal__article__title">{{$banner->titulo}}</strong>
 						<p class="banner_principal__article__text"><strong>{{$banner->autor}}</strong> {{$banner->cancion}}</p>
-						
+
 						<!--<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[value="todos"],input[value="total"],input[value="anglo"]'>VER RANKING</a>-->
-						<a 
-							href="/#ranking" 
-							class="button m--black fnSetRanking" 
-							data-ranking='input[name="artistas"][value="{{strtolower(@$banner->register->artist->id)}}"],input[name="region"][value="{{strtolower(@$banner->register->region->id)}}"],input[name="genero_musical"][value="{{strtolower(@$banner->register->gender->id)}}"]'
-							>VER RANKING</a>
-					
+						<a href="/#ranking" class="button m--black fnSetRanking" data-ranking='input[name="artistas"][value="{{strtolower(@$banner->register->artist->id)}}"],input[name="region"][value="{{strtolower(@$banner->register->region->id)}}"],input[name="genero_musical"][value="{{strtolower(@$banner->register->gender->id)}}"]'>VER RANKING</a>
+
 					</div>
 				</div>
 			</article>
 			@endforeach
-			
+
 		</div>
 		<div class="banner_principal__sponsors">
 			<strong class="">Gracias a:</strong>
@@ -44,17 +40,17 @@
 			<h2 class="title">Conoce los rankings semanales</h2>
 			<p class="resume">Selecciona el género y la región para visualizar el último ranking.</p>
 		</div>
-		<div class="ranking__form" >
+		<div class="ranking__form">
 			<div class="ranking__form__block fnRegionOptions">
 				<strong class="ranking__form__block__title">Artistas</strong>
 				<div class="ranking__form__block__options">
-					
+
 					<!--foreach ($artistas as $key => $value) : -->
-					@foreach ($artistas as $row)										
-						<label class="ranking__form__block__option">
-							<input type="radio" name="artistas" value="{{$row->id}}" class="fnRankingOption input__artista">
-							<span class="button m--white">{{$row->nombre}}</span>
-						</label>
+					@foreach ($artistas as $row)
+					<label class="ranking__form__block__option">
+						<input type="radio" name="artistas" value="{{$row->id}}" class="fnRankingOption input__artista">
+						<span class="button m--white">{{$row->nombre}}</span>
+					</label>
 					@endforeach
 					<!--endforeach-->
 				</div>
@@ -62,9 +58,9 @@
 			<div class="ranking__form__block fnRegionOptions">
 				<strong class="ranking__form__block__title">Región</strong>
 				<div class="ranking__form__block__options">
-					
+
 					<!--foreach ($regiones as $key => $value) -->
-					@foreach ($regiones as $row)	
+					@foreach ($regiones as $row)
 					<label class="ranking__form__block__option">
 						<input type="radio" name="region" value="{{$row->id}}" class="fnRankingOption input__region">
 						<span class="button m--white">{{$row->nombre}}</span>
@@ -76,9 +72,9 @@
 			<div class="ranking__form__block fnGeneroMusicalOptions">
 				<strong class="ranking__form__block__title">Género músical</strong>
 				<div class="ranking__form__block__options">
-					
+
 					<!-- foreach ($generos_musicales as $key => $value) : -->
-					@foreach ($generos as $row)	
+					@foreach ($generos as $row)
 					<label class="ranking__form__block__option">
 						<input type="radio" name="genero_musical" value="{{$row->id}}" class="fnRankingOption input__genero">
 						<span class="button m--white">{{$row->nombre}}</span>
@@ -116,16 +112,20 @@
 		<div class="video_radiotop__content">
 			<iframe class="video_radiotop__video" src="{{$bloques[4]->enlace}}" title="Radio TOP TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<div class="video_radiotop__advertises">
-				<picture class="video_radiotop__advertise">
-					<source media="(max-width:800px)" srcset="/storage/{{$publicidad1[0]->imagen}}">
-					<img src="/storage/{{$publicidad1[0]->imagen}}" alt="" loading="lazy" />
-				</picture>
-				<picture class="video_radiotop__advertise">
-					<source media="(max-width:800px)" srcset="/storage/{{$publicidad2[0]->imagen}}">
-					<img src="/storage/{{$publicidad2[0]->imagen}}" alt="" loading="lazy" />
-				</picture>
+				<a class="video_radiotop__advertise fnRandomImage" data-id="1" href="#">
+					<picture>
+						<source media="(max-width:800px)" srcset="/storage/{{$publicidad1[0]->imagen}}">
+						<img src="/storage/{{$publicidad1[0]->imagen}}" alt="" loading="lazy" />
+					</picture>
+				</a>
+				<a class="video_radiotop__advertise fnRandomImage" data-id="2" href="#">
+					<picture>
+						<source media="(max-width:800px)" srcset="/storage/{{$publicidad2[0]->imagen}}">
+						<img src="/storage/{{$publicidad2[0]->imagen}}" alt="" loading="lazy" />
+					</picture>
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
-@endsection 
+@endsection

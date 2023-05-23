@@ -8,14 +8,17 @@
 				<a href="/">INICIO</a> / <span>Nuestros servicios</span>
 			</div>
 			<div class="anuncia_con_nosotros__content__inset">
-				<h1 class="anuncia_con_nosotros__content__title">Nuestros servicios</h1>
-				<p class="anuncia_con_nosotros__content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam tempore consectetur eaque nemo voluptatum similique molestias quis maxime ullam.</p>
+				<h1 class="anuncia_con_nosotros__content__title">CONOCE NUESTROS SERVICIOS</h1>
+				<p class="anuncia_con_nosotros__content__text">Contamos con un equipo con amplio conocimiento de la industria musical y especialmente del medio radial.</p>
 				<dl class="anuncia_con_nosotros__content__list">
-					<dt>+3.5k</dt>
-					<dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit A doloribus debitis.</dd>
-					<dt>25%</dt>
-					<dd>Sit amet consectetur adipisicing elit. A doloribus debitis ipsum in sit cum maxime.</dd>
+					<dt>1</dt>
+					<dd>Análisis de la competencia</dd>
+					<dt>2</dt>
+					<dd>Mapeo de oportunidades en la industria</dd>
+					<dt>3</dt>
+					<dd>Soporte de comunicación para managers</dd>
 				</dl>
+				<p class="anuncia_con_nosotros__content__text">Escríbenos y conoce qué podemos hacer por tu banda o grupo musical.</p>
 			</div>
 			<span></span>
 		</div>

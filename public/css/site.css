@@ -1402,11 +1402,12 @@ select {
 .anuncia_con_nosotros__content__list dt {
   font-family: 'gothamblack';
   font-size: 2.5rem;
-  width: 9.375rem;
+  width: 60px;
   line-height: 1;
+  text-align: center;
 }
 .anuncia_con_nosotros__content__list dd {
-  width: calc(100% - 150px);
+  width: calc(100% - 60px);
   padding-top: 0.3125rem;
   line-height: 1.3;
 }
