@@ -1573,22 +1573,25 @@ select {
   }
   .anuncia_con_nosotros__content__list {
     max-width: initial;
+    align-items: center;
+    gap: 15px 0;
+    margin-bottom: 25px;
   }
   .anuncia_con_nosotros__content__list dt,
   .anuncia_con_nosotros__content__list dd {
-    width: 50%;
     text-align: center;
     padding: 0 0.9375rem;
+    order: 0;
+    margin-bottom: 0;
   }
   .anuncia_con_nosotros__content__list dt {
-    order: 0;
     font-size: 2.1875rem;
-    margin-bottom: 0.9375rem;
+    width: 40px;
   }
   .anuncia_con_nosotros__content__list dd {
-    order: 1;
     font-size: 0.875rem;
-    margin-bottom: 0;
+    width: calc(100% - 40px);
+    text-align: left;
   }
   .anuncia_con_nosotros__form {
     gap: 1.25rem;
@@ -1632,7 +1635,7 @@ select {
     margin-bottom: 1.5625rem;
     font-size: 0.9375rem;
   }
-  .anuncia_con_nosotros__content__list dt,
+  /* .anuncia_con_nosotros__content__list dt,
   .anuncia_con_nosotros__content__list dd {
     width: 100%;
   }
@@ -1647,7 +1650,7 @@ select {
   }
   .anuncia_con_nosotros__content__list dd:last-child {
     margin-bottom: 0;
-  }
+  } */
   .anuncia_con_nosotros__thanks {
     padding: 3.125rem 0;
   }
