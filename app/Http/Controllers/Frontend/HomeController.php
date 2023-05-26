@@ -95,16 +95,16 @@ class HomeController extends Controller
 
         if($genero == "empty"){
             
-            $region = Region::where('nombre',$region)->first();
-            $artista = Artist::where('nombre',$artista)->first();
-            $ranking = Register::where('region_id',$region->id)->where('artist_id',$artista->id)->first();
+            $regi = Region::where('nombre',strtolower($region))->first();
+            $artist = Artist::where('nombre',strtolower($artista))->first();
+            $ranking = Register::where('region_id',$regi->id)->where('artist_id',$artist->id)->first();
         
         }else{
 
-            $region = Region::where('nombre',$region)->first();
-            $artista = Artist::where('nombre',$artista)->first();
-            $genero = Gender::where('nombre',$genero)->first();
-            $ranking = Register::where('region_id',$region->id)->where('artist_id',$artista->id)->where('gender_id',$genero->id)->first();
+            $regi = Region::where('nombre',strtolower($region))->first();
+            $artist = Artist::where('nombre',strtolower($artista))->first();
+            $gene = Gender::where('nombre',$genero)->first();
+            $ranking = Register::where('region_id',$regi->id)->where('artist_id',$artist->id)->where('gender_id',$gene->id)->first();
         
         }
 
