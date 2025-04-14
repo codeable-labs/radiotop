@@ -3,8 +3,11 @@
 
 <section class="section ranking_resultados">
 	<div class="limit ranking_resultados__inset">
-		<a class="fnRandomImage" href="#" data-id="4" href="#">
-		</a>
+		<div>
+			<a class="fnRandomImage" href="#" data-id="4" href="#">
+				<img src="{{ asset('images/bmat_banner.png') }}" alt="Descripción de la imagen" class="banner-image">
+			</a>
+		</div>
 		<div class="ranking_resultados__content">
 			<div class="container_table">
 				<div class="container_title_ranking">
@@ -16,44 +19,46 @@
 					</p>
 				</div>
 				
-				<table>
-					<thead>
-						<tr>
-							<th>POSICIÓN</th>
-							<th>CANCIÓN</th>
-							<th>ARTISTA</th>
-							<th>IMPACTO*</th>
-							<th>TOCADAS</th>
-						</tr>
-					</thead>
-					<tbody>
-            @if (count($ranking->music_list) > 0)
-            @foreach ($ranking->music_list as $row)
-            <tr>
-                <td>#{{$row->position}}</td>
-                <td>{{$row->cancion}}</td>
-                <td>{{$row->artista}}</td>
-                <td>{{$row->impacto}}</td>
-                <td>{{$row->tocadas}}</td>
-            </tr>
-            @endforeach
-            @else
-            <tr>
-                <td colspan="5">No hay datos disponibles.</td>
-            </tr>
-            @endif
-					</tbody>
-					
-					<tfoot>
-						<tr>
-							<td colspan="5">*Impacto: Representado en miles</td>
-						</tr>
-					</tfoot>
-				</table>
+				<div class="table-container">
+					<div class="table-header">
+							<div class="table-row">
+									<div class="table-cell">POSICIÓN</div>
+									<div class="table-cell">CANCIÓN</div>
+									<div class="table-cell">ARTISTA</div>
+									<div class="table-cell">IMPACTO*</div>
+									<div class="table-cell">TOCADAS</div>
+							</div>
+					</div>
+					<div class="table-body">
+							@if (count($ranking->music_list) > 0)
+							@foreach ($ranking->music_list as $row)
+							<div class="table-row">
+									<div class="table-cell">#{{$row->position}}</div>
+									<div class="table-cell">{{$row->cancion}}</div>
+									<div class="table-cell">{{$row->artista}}</div>
+									<div class="table-cell">{{$row->impacto}}</div>
+									<div class="table-cell">{{$row->tocadas}}</div>
+							</div>
+							@endforeach
+							@else
+							<div class="table-row">
+									<div class="table-cell" colspan="5">No hay datos disponibles.</div>
+							</div>
+							@endif
+					</div>
+					<div class="table-footer">
+							<div class="table-row">
+									<div class="table-cell" colspan="5">*Impacto: Representado en miles</div>
+							</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<a class="fnRandomImage" href="#" data-id="4" href="#">
-		</a>
+		<div>
+			<a class="fnRandomImage" href="#" data-id="4" href="#">
+				<img src="{{ asset('images/banner-de-cpi-1.gif') }}" alt="Descripción de la imagen">
+			</a>
+		</div>
 	</div>
 </section>
 @endsection

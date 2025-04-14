@@ -1,5 +1,6 @@
 .container_table {
     width: 100%;
+    max-height: 600px;
     background-color: #fff;
     margin: 0 auto;
     padding-top: 18px;
@@ -29,36 +30,48 @@
     font-weight: normal;
 }
 
-table {
+.table-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    border-collapse: collapse;
-    background-color: #f9f7f7;
     font-family: "Gotham Book";
-    border-spacing: 0 20px;
 }
 
-table thead th {
+.table-header,
+.table-footer {
     background-color: #fff;
-    text-align: left;
-    padding: 10px;
     font-weight: bold;
 }
 
-/* Estilo para las filas del cuerpo */
-table tbody td {
+.table-body {
+    max-height: 382px;
+    overflow-y: auto;
+}
+
+.table-row {
+    display: flex;
+    width: 100%;
+}
+
+.table-cell {
+    flex: 1; /* Ajusta el ancho de las celdas */
     padding: 10px;
     text-align: left;
     font-size: 14px;
 }
 
-/* Estilo para las filas alternadas */
-table tbody tr:nth-child(even) {
-    background-color: #fff;
+.table-row:nth-child(even) {
+    background-color: #f9f7f7; /* Filas alternadas */
 }
 
-table tfoot td {
-    background-color: #fff;
-    font-weight: bold;
-    text-align: left;
-    padding-top: 20px;
+.banner-image {
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+    filter: invert(1) brightness(2);
+    border-radius: 5px;
+}
+
+.image-fixed {
+    position: fixed;
 }
