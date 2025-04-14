@@ -28,6 +28,7 @@
     <link rel="shortcut icon" href="" />
 
     <link rel="stylesheet" href="\css\site.css">
+    <link rel="stylesheet" href="\css\ranking.css">
 
 </head>
 
