@@ -8,10 +8,8 @@ nixPkgs = ["php82", "php82Packages.composer", "nodejs"]
 cmds = [
   "composer install",
   "npm install"
+  "npm run build"
 ]
-
-[phases.build]
-cmds = ["npm run build"]
 
 [start]
 cmd = "php -S 0.0.0.0:3000 -t public"
