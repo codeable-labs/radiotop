@@ -2,10 +2,16 @@
 nixpacksVersion = "1.20.0"
 
 [phases.setup]
-nixPkgs = ["php82", "php82Packages.composer"]
+nixPkgs = ["php82", "php82Packages.composer", "nodejs"]
 
 [phases.install]
-cmds = ["composer install --no-interaction --prefer-dist --optimize-autoloader"]
+cmds = [
+  "composer install --no-interaction --prefer-dist --optimize-autoloader",
+  "npm install"
+]
+
+[phases.build]
+cmds = ["npm run build"]
 
 [start]
 cmd = "php -S 0.0.0.0:3000 -t public"
